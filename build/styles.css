@@ -1,0 +1,38 @@
+canvas {
+  background-color: blue;
+}
+
+#content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#wateringCan {
+	display: flex;
+	flex-direction: column;
+}
+
+@keyframes recent-upgrade-highlight {  
+  0% {
+ background: #19a337; 
+}
+ 100% {
+ background: none; }
+}
+
+.most-recent-highlight {
+ animation: recent-upgrade-highlight 1s; 
+}
+
+@keyframes insufficient-highlight {  
+  0% {
+ background: #ed3200; 
+}
+ 100% {
+ background: none; }
+}
+
+.insufficient-funds-highlight {
+ animation: insufficient-highlight 1s; 
+}
