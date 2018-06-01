@@ -19,18 +19,24 @@ export default class Upgrade {
 	toNode(upgradeDivId = '') {
 		let upgradeDiv = document.createElement('div');
 
-		let purchaseButton = document.createElement('button')
-  	let buttonTitle = document.createTextNode(this.id)
-  	let descriptionText = document.createTextNode(this.description)
+		let purchaseButton = document.createElement('button');
+  	let buttonTitle = document.createTextNode(this.id);
 
+  	let costText = document.createTextNode(`Current Cost: ${this.cost}`)
+  	let numberOwnedText = document.createTextNode(`Number Owned: ${this.amount}`)
+  	let descriptionText = document.createTextNode(this.description);
+  	
   	if (upgradeDivId) {
   		upgradeDiv.setAttribute('id', upgradeDivId);
   	}
-
+  	purchaseButton.className = "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent";
   	purchaseButton.setAttribute('id', this.id);
-  	 purchaseButton.appendChild(buttonTitle);
+  	purchaseButton.appendChild(buttonTitle);
 
+  	upgradeDiv.className = "demo-card-square mdl-card mdl-shadow--2dp";
   	upgradeDiv.appendChild(purchaseButton);
+  	upgradeDiv.appendChild(costText);
+  	upgradeDiv.appendChild(numberOwnedText);
   	upgradeDiv.appendChild(descriptionText);
 
   	return upgradeDiv;

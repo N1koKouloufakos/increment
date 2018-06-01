@@ -2,6 +2,10 @@ canvas {
   background-color: blue;
 }
 
+#waterPlants {
+  margin-top: 12px;
+}
+
 #content {
 	display: flex;
 	flex-direction: row;
@@ -15,7 +19,7 @@ canvas {
 
 @keyframes recent-upgrade-highlight {  
   0% {
- background: #19a337; 
+ background: #19a337;
 }
  100% {
  background: none; }
@@ -35,4 +39,15 @@ canvas {
 
 .insufficient-funds-highlight {
  animation: insufficient-highlight 1s; 
+}
+
+#finalUpgradesContainer {
+	min-height: 300px;
+}
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  min-height: 120px !important;
+  max-height: 120px !important;
+  margin: 20px;
 }
